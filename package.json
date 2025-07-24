@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
   "lint": "eslint src/**/*.js",
-  "test": "node src/test.js",
+  "test": "node tests/app.test.js",
   "build": "webpack"
   },
   "keywords": [],
