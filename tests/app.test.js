@@ -1,7 +1,9 @@
-// tests/app.test.js
+const axios = require('axios');
 
-describe('Demo Test', () => {
-  it('should fail intentionally', () => {
-    expect(true).toBe(false); // This will always fail
+describe('API Test', () => {
+  it('should return 200 and expected data', async () => {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
+    expect(response.status).toBe(200);
+    expect(response.data).toHaveProperty('nonExistentField'); // Intentional failure
   });
 });
